@@ -7,7 +7,6 @@ Here are five PostgreSQL table creation problems with foreign key relationships,
 ## Solution
 
 ```sql
-
 CREATE TABLE departments (
     dprt_id SERIAL PRIMARY KEY,
     dprt_name VARCHAR(40) NOT NULL,
@@ -32,6 +31,17 @@ CREATE TABLE employees (
 ### 2. **Multiple Foreign Keys and Cascading Constraints**
 
 - Extend the `employees` table to include an additional foreign key `manager_id` that references `employee_id` in the same `employees` table (i.e., a self-referential foreign key). Set this foreign key constraint to cascade updates and deletes so that if a manager’s `employee_id` is updated or deleted, all associated employees are updated or deleted accordingly.
+
+```sql
+
+ALTER TABLE employees
+  ADD COLUMN manager_id INT,
+  ADD CONSTRAINT fk_manager FOREIGN KEY (manager_id)
+  REFERENCES employees(employees_id)
+  ON UPDATE CASCADE
+  ON DELETE SET NULL;
+
+```
 
 ### 3. **Project Table with Composite Primary Key and Foreign Keys**
 
