@@ -1,4 +1,7 @@
-Here's a structured roadmap for becoming a PostgreSQL Expert Engineer, organized into three levels: beginner, advanced, and expert. Each level includes specific topics and links to the relevant sections of the official PostgreSQL documentation for detailed reference.
+Here's a structured roadmap for becoming a PostgreSQL Expert Engineer, 
+organized into three levels: beginner, advanced, and expert. Each level 
+includes specific topics and links to the relevant sections of the official 
+PostgreSQL documentation for detailed reference.
 
 1. Beginner Level
     Focus on foundational concepts and basic operations.
